@@ -1,0 +1,113 @@
+@font-face {
+    font-family: fontnew;
+    src: url("./IslandMoments-Regular.ttf");
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@media only screen and (max-width: 740px){
+    .containt{
+        max-width: 390px;
+        background-color: #FDAFBD;
+        position: relative;
+        overflow: hidden;
+        
+    }
+    .heart{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        background-image: url(img/heart.png);
+        background-size: cover;
+        opacity: 80%;
+        animation: animationHeart 4s ease-in-out infinite;
+    }
+    @keyframes animationHeart{
+        0%{
+            transform: translate(0,0);
+            opacity: 0;
+        }
+        50%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+            transform: translate(100px, 100vh);
+        }
+    }
+    .header{
+        max-width: 100%;
+        position: relative;
+    }
+    .header>img{
+        width: 100%;
+    }
+    .header>h1{
+        position: absolute;
+        top: 80px;
+        left: 37%;
+        font-size: 40px;
+        color: white;
+    }
+    .header>p{
+        position: absolute;
+        top: 120px;
+        left: 23%;
+        font-family: fontnew;
+        font-size: 80px;
+        color: white;
+    }
+    .content{
+        max-width: 100%;
+        margin-top: 10px;
+    }
+    .img-chuan{
+        width: 100%;
+        display: block;
+    }
+    .item1{
+        width: 100px;
+        height: 80px;
+        float: right;
+        margin-top: -80px;
+        margin-right: 8px;
+        transform: rotateZ(10deg);
+    }
+    .item2{
+        width: 150px;
+        height: 170px;
+        margin-top: 50px;
+        margin-left: 40px;
+        transform: rotateZ(350deg);
+    }
+    .item3{
+        float: right;
+        margin-right: 60px;
+        margin-top: -150px;
+        width: 150px;
+        height: 160px;
+        transform: rotateZ(10deg);
+    }
+    .content-chu{
+        margin-top: 30px;
+    }
+    .item4{
+        /* margin-top: 10px; */
+        display: flex;
+    }
+    .footer{
+        display: block;
+        font-size: larger;
+        font-style: italic;
+        font-family: cursive;
+        background-color: hotpink;
+        color: white;
+        padding: 10px;
+        height: 100px;
+        margin-top: 40px;
+    }
+}

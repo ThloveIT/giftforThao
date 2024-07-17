@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift for Thao</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="all.min.css">
+</head>
+<audio autoplay>
+    <source src="happybirthday.mp3">
+</audio>
+<body>
+    <div id="container" class="containt">
+        <div class="header">
+            <img class="img-responsive" src="img/bai.jpg" alt="">
+            <div class="avartar border-radius">
+                <img class="img-responsive-center border-radius" src="img/avartar.jpg" alt="">
+            </div>
+        </div>
+        <div class="info">
+            <h1 class="text-center" style="color: white; ">Information</h1>
+            <p>Họ tên: Vũ Thị Thảo</p>
+            <p>Ngày sinh: 18/07/2003</p>
+            <p>Nghề nghiệp: Báo thủ</p>
+            <p>Sở thích: Thích tiêu tiền, mua <br> 
+                sắm, du lịch, ăn uống và đặc <br>
+                biệt là thích ngủ</p>
+        </div>
+        <div id="button" class="button">
+            <div class="next-btn">
+                <p>Click here</p>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-content">
+                <p><center>Your friend,<br>
+                    Thuận
+                  </center></p>
+            </div>
+        </div>
+        <div class="heart">
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script>
+    document.getElementById("button").addEventListener("click", function(){
+        window.location.href = "thiep.html";
+    })
+    let container = document.getElementById('container')
+    let count = 50;
+    for(var i = 0; i<50; i++){
+      let leftHeart = Math.floor(Math.random() * container.clientWidth);
+      let topHeart = Math.floor(Math.random() * container.clientHeight);
+      let widthHeart = Math.floor(Math.random() * 50);
+      let timeHeart = Math.floor(Math.random() * 5 + 5);
+      let div = document.createElement('div');
+      div.classList.add('heart');
+      div.style.left = leftHeart + 'px';
+      div.style.top = topHeart + 'px';
+      div.style.width = widthHeart + 'px';
+      div.style.height = widthHeart + 'px';
+      div.style.animationDuration = timeHeart + 's';
+      container.appendChild(div);
+    }
+</script>
+</html>
